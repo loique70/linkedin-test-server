@@ -9,6 +9,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRoutes from "./src/Routes/userRoutes";
 import sectorRoutes from "./src/Routes/sectorRoutes";
+import path from "path";
 
 dotenv.config();
 
@@ -26,6 +27,12 @@ app.use(
 app.use(compression());
 app.use(cookieParser());
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "/")));
+
+app.get("/", function (req: any, res: any) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
 app.use(userRoutes);
 app.use(sectorRoutes);
 
