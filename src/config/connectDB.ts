@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+//database connexion
 export default () => {
   mongoose
     .connect(process.env.MONGODB_URI, {
