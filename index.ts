@@ -4,11 +4,11 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import compression from "compression";
 import cors from "cors";
-import connectDB from "./config/connectDB";
+import connectDB from "./src/config/connectDB";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import userRoutes from "./Routes/userRoutes";
-import sectorRoutes from "./Routes/sectorRoutes";
+import userRoutes from "./src/Routes/userRoutes";
+import sectorRoutes from "./src/Routes/sectorRoutes";
 
 dotenv.config();
 
